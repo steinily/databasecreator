@@ -21,8 +21,8 @@ cnt = 1
 y = ''
 while cnt < dataBaseSize+1:
     userdatabase["id"] = int(cnt)
-    userdatabase["csaladnev"] =(csaladNev.readline().strip('\n')+" "+(utoNev.readline().strip('\n')
-    userdatabase["email"] = csaladNev.readline().strip('\n')+utoNev.readline().strip('\n')+"@"+(email.readline().strip('\n')
+    userdatabase["csaladnev"] =csaladNev.readline().strip('\n')+" "+utoNev.readline().strip('\n')
+    userdatabase["email"]=csaladNev.readline().strip('\n')+utoNev.readline().strip('\n')+"@"+email.readline().strip('\n')
     y = json.dumps(userdatabase, ensure_ascii=False).encode('utf8')
     dataBaseForTraining.write(y.decode())
     if cnt==dataBaseSize:
